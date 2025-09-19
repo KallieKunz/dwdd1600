@@ -1,0 +1,237 @@
+/* ===============================
+   Scoreboard Sounds — Base Styles
+   External CSS for Unit 4 (Intro CSS)
+   Replace colors/fonts here to match your Unit-2 design doc.
+   =============================== */
+
+/* Color & spacing tokens */
+:root {
+    --bg: #0B132B;
+    /* page background */
+    --surface: #141A33;
+    /* cards/navigation */
+    --accent: #00E5FF;
+    /* links / highlights */
+    --accent-2: #FFD166;
+    /* secondary accent */
+    --text: #EAF1FF;
+    /* body text */
+    --muted: #9FB0D9;
+    /* subtle text */
+    --border: #24325A;
+
+    --radius: 12px;
+    --space-1: .5rem;
+    --space-2: 1rem;
+    --space-3: 1.5rem;
+}
+
+/* ========== Global / Body (required) ========== */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    font-family: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    /* font-family present */
+    font-weight: 400;
+    /* weight #1 */
+    font-size: 1rem;
+    /* size #1 */
+    line-height: 1.6;
+    color: var(--text);
+    background-color: var(--bg);
+    /* background color used */
+}
+
+/* Container-ish spacing */
+header,
+nav,
+main,
+footer {
+    padding: var(--space-2) var(--space-3);
+    max-width: 950px;
+    margin-inline: auto;
+}
+
+/* ========== Header ========== */
+.brand {
+    margin: 0;
+    font-weight: 700;
+    /* weight #2 */
+    font-size: 1.5rem;
+    /* size #2 */
+    letter-spacing: .3px;
+    color: var(--text);
+}
+
+#site-name {
+    padding: .15rem .45rem;
+    border: 2px solid var(--accent);
+    /* border style with color/type/thickness */
+    border-radius: var(--radius);
+    /* border radius requirement */
+    background: linear-gradient(0deg, rgba(0, 229, 255, 0.08), transparent);
+}
+
+.tagline {
+    margin: .3rem 0 0 0;
+    color: var(--muted);
+}
+
+/* ========== Navigation (required) ========== */
+nav {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+.menu {
+    /* Flexbox horizontal menu */
+    display: flex;
+    /* Flexbox requirement */
+    gap: var(--space-2);
+    list-style: none;
+    margin: 0;
+    padding: var(--space-1) var(--space-2);
+    min-height: 48px;
+    /* menu at least 48px tall */
+    align-items: center;
+}
+
+.menu a,
+.menu .current {
+    display: inline-flex;
+    align-items: center;
+    height: 48px;
+    /* 48px target size */
+    padding: 0 .75rem;
+    border-radius: 10px;
+    text-decoration: none;
+    /* remove underline requirement */
+    color: var(--text);
+    font-weight: 700;
+}
+
+.menu a:hover {
+    /* pseudo-class on anchors */
+    background-color: rgba(0, 229, 255, .15);
+    color: var(--accent);
+}
+
+.menu .current {
+    background: rgba(0, 229, 255, .22);
+    color: var(--accent);
+    cursor: default;
+}
+
+/* ========== Headings & Paragraphs (required) ========== */
+h1 {
+    margin: 1.2rem 0 .6rem;
+    font-size: 2rem;
+    /* different font size */
+    line-height: 1.2;
+    color: var(--accent);
+}
+
+h2 {
+    margin: 1.1rem 0 .4rem;
+    font-size: 1.25rem;
+    /* different size from h1/body */
+    color: var(--accent-2);
+}
+
+p {
+    margin: .5rem 0;
+}
+
+/* ========== Cards / Sections (borders & radius) ========== */
+.card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    /* border color/type/thickness */
+    border-radius: var(--radius);
+    /* border radius */
+    padding: var(--space-2);
+    margin: var(--space-2) 0;
+}
+
+/* ========== Lists (styling & spacing required) ========== */
+.feature-list {
+    list-style: square;
+    /* change bullet type */
+    padding-left: 1.25rem;
+    /* padding requirement */
+    margin: .5rem 0 .25rem;
+    /* margin requirement */
+}
+
+.steps {
+    list-style: decimal-leading-zero;
+    padding-left: 1.5rem;
+    margin: .5rem 0 .25rem;
+}
+
+.tracklist {
+    list-style: disc;
+    /* explicit bullet type for track list */
+    padding-left: 1.25rem;
+    margin: .5rem 0 0;
+}
+
+.tracklist li {
+    margin: .3rem 0;
+}
+
+.title {
+    font-weight: 700;
+}
+
+.artist {
+    font-style: italic;
+}
+
+/* Definition list styling */
+.glossary dt {
+    font-weight: 700;
+    color: var(--accent-2);
+}
+
+.glossary dd {
+    margin: 0 0 .6rem 0;
+    padding-left: .75rem;
+    border-left: 3px solid var(--border);
+    color: var(--text);
+}
+
+/* ========== Footer ========== */
+footer {
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+    margin-top: var(--space-3);
+}
+
+footer a {
+    color: var(--accent);
+}
+
+footer a:hover {
+    color: var(--accent-2);
+}
+
+/* ==============================================
+   Notes:
+   - Meets “Styling Tags” (body, h1, h2, p, nav)
+   - Flexbox horizontal nav, underline removed, 48px tall, wayfinding styled
+   - Pseudo-class :hover on anchors (menu + content)
+   - Borders + radius on brand outline & cards
+   - Lists styled (bullets, padding/margin, dl styles)
+   - Two font weights (400, 700) and multiple sizes
+   ============================================== */

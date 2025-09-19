@@ -2,37 +2,54 @@
 <html lang="en">
 
 <head>
-    <!-- Document Head Requirements -->
     <meta charset="utf-8">
     <title>Scoreboard Sounds | Music to Get the Game Bumping</title>
     <meta name="author" content="Kallie Kunz">
     <meta name="description"
         content="Scoreboard Sounds helps game ops leaders find clean, high-energy music for tipoff, timeouts, hype moments, and more.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /* Simple wayfinding style so the current page is obvious */
+        nav ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        nav li {
+            display: inline-block;
+            margin-right: .75rem;
+        }
+
+        nav a {
+            text-decoration: underline;
+        }
+
+        nav .current {
+            font-weight: 700;
+            text-decoration: none;
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Semantic Tags: header, nav, main, footer -->
+    <!-- Header: site name (span) + slogan per requirements -->
     <header>
-        <h1>
-            <span id="site-name">Scoreboard Sounds</span>
-        </h1>
+        <p class="brand"><span id="site-name">Scoreboard Sounds</span></p>
         <p class="tagline">Music to Get the Game Bumping</p>
     </header>
 
+    <!-- Wayfinding: current page is NOT a link -->
     <nav aria-label="Main navigation">
-        <!-- Navigation Requirements: unordered list with links between both pages -->
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="library.html">Music Library</a></li>
+            <li><span class="current">Home</span></li>
+            <li><a href="./library.html">Music Library</a></li>
         </ul>
     </nav>
 
     <main>
-        <!-- Heading Tags: h1 is first thing inside main -->
+        <!-- Page title: first thing inside <main> -->
         <h1>Game-Day Music Made Simple</h1>
 
-        <!-- At least three h2s + four paragraphs total across site -->
         <section>
             <h2>Who We Serve</h2>
             <p>We help <em>high school</em> and small-venue game ops teams quickly find clean, high-energy tracks for
@@ -44,7 +61,6 @@
 
         <section>
             <h2>What You’ll Find</h2>
-            <!-- List Tags: unordered list (not the nav) -->
             <ul>
                 <li>Tipoff &amp; Intro anthems</li>
                 <li>Timeout hype cuts</li>
@@ -57,7 +73,6 @@
 
         <section>
             <h2>How to Use It</h2>
-            <!-- List Tags: ordered list -->
             <ol>
                 <li>Open the <strong>Music Library</strong> page.</li>
                 <li>Pick a category (Warm-Up, Timeouts, Intros).</li>
@@ -68,7 +83,6 @@
                 of timeouts changing length.</p>
         </section>
 
-        <!-- Other Tags: definition list with 3 terms/defs -->
         <section>
             <h2>Quick Glossary</h2>
             <dl>
@@ -81,7 +95,6 @@
             </dl>
         </section>
 
-        <!-- Links to Other Sites (open in new tab) -->
         <section>
             <h2>Helpful Tools</h2>
             <p>
@@ -91,23 +104,20 @@
             </p>
         </section>
 
-        <!-- Phone Number Link (tel:) -->
         <section>
             <h2>Need Help Fast?</h2>
             <p>Call our game-ops hotline at <a href="tel:+18015551234">+1 (801) 555-1234</a> for last-minute playlist
                 help.</p>
         </section>
 
-        <!-- HTML comment present -->
         <!-- This page focuses on audience, features, and how-to steps. -->
     </main>
 
     <footer>
-        <!-- Address tag present -->
         <address>
             Scoreboard Sounds &bull; Provo, UT 84601 &bull; <a href="tel:+18015551234">+1 (801) 555-1234</a>
         </address>
-        <p>&copy; <span id="year">2025</span> <span>Scoreboard Sounds</span>. All rights reserved.</p>
+        <p>&copy; 2025 <span>Scoreboard Sounds</span>. All rights reserved.</p>
     </footer>
 </body>
 

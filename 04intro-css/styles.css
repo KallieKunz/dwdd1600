@@ -4,28 +4,6 @@
    Replace colors/fonts here to match your Unit-2 design doc.
    =============================== */
 
-/* Color & spacing tokens */
-:root {
-    --bg: #0B132B;
-    /* page background */
-    --surface: #141A33;
-    /* cards/navigation */
-    --accent: #00E5FF;
-    /* links / highlights */
-    --accent-2: #FFD166;
-    /* secondary accent */
-    --text: #EAF1FF;
-    /* body text */
-    --muted: #9FB0D9;
-    /* subtle text */
-    --border: #24325A;
-
-    --radius: 12px;
-    --space-1: .5rem;
-    --space-2: 1rem;
-    --space-3: 1.5rem;
-}
-
 /* ========== Global / Body (required) ========== */
 html {
     box-sizing: border-box;

@@ -1,215 +1,171 @@
-/* ===============================
-   Scoreboard Sounds — Base Styles
-   External CSS for Unit 4 (Intro CSS)
-   Replace colors/fonts here to match your Unit-2 design doc.
-   =============================== */
+/* ==============================================
+   Scoreboard Sounds — Unit 4 External CSS
+   NO CSS variables. All hex values are literal.
+   ============================================== */
 
-/* ========== Global / Body (required) ========== */
-html {
-    box-sizing: border-box;
+/* ----- Global / Body (required) ----- */
+html { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit; }
+
+body{
+  margin: 0;
+  font-family: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; /* font-family present */
+  font-weight: 400;     /* weight #1 */
+  font-size: 16px;      /* size #1 */
+  line-height: 1.6;
+  color: #EAF1FF;       /* body text color */
+  background-color: #0B132B; /* background color used */
 }
 
-*,
-*::before,
-*::after {
-    box-sizing: inherit;
+/* Page gutters */
+header, nav, main, footer{
+  padding: 1rem 1.5rem;
+  max-width: 950px;
+  margin: 0 auto;
 }
 
-body {
-    margin: 0;
-    font-family: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-    /* font-family present */
-    font-weight: 400;
-    /* weight #1 */
-    font-size: 1rem;
-    /* size #1 */
-    line-height: 1.6;
-    color: var(--text);
-    background-color: var(--bg);
-    /* background color used */
+/* ----- Header (must contain ONLY the span) ----- */
+/* Matches instructor example format */
+header span{
+  color: #024873;       /* brand color as shown in feedback example */
+  font-size: 1.6rem;    /* size #2 */
+  font-weight: 700;     /* weight #2 */
+  display: inline-block;
+  padding: 0.15rem 0.45rem;
+  border: 2px solid #00E5FF;      /* border color/type/thickness */
+  border-radius: 12px;             /* border radius */
+  background-color: rgba(0,229,255,0.08);
 }
 
-/* Container-ish spacing */
-header,
-nav,
-main,
-footer {
-    padding: var(--space-2) var(--space-3);
-    max-width: 950px;
-    margin-inline: auto;
+/* ----- Navigation (required) ----- */
+nav{
+  background-color: #141A33;
+  border: 1px solid #24325A;
+  border-radius: 12px;
 }
 
-/* ========== Header ========== */
-.brand {
-    margin: 0;
-    font-weight: 700;
-    /* weight #2 */
-    font-size: 1.5rem;
-    /* size #2 */
-    letter-spacing: .3px;
-    color: var(--text);
+/* Horizontal menu using Flexbox */
+.menu{
+  display: flex;                      /* Flexbox requirement */
+  gap: 16px;
+  list-style: none;                   /* ul bullets removed for nav */
+  margin: 0;
+  padding: 8px 16px;
+  min-height: 48px;                   /* ensure 48px tall */
+  align-items: center;
 }
 
-#site-name {
-    padding: .15rem .45rem;
-    border: 2px solid var(--accent);
-    /* border style with color/type/thickness */
-    border-radius: var(--radius);
-    /* border radius requirement */
-    background: linear-gradient(0deg, rgba(0, 229, 255, 0.08), transparent);
-}
-
-.tagline {
-    margin: .3rem 0 0 0;
-    color: var(--muted);
-}
-
-/* ========== Navigation (required) ========== */
-nav {
-    background-color: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-}
-
-.menu {
-    /* Flexbox horizontal menu */
-    display: flex;
-    /* Flexbox requirement */
-    gap: var(--space-2);
-    list-style: none;
-    margin: 0;
-    padding: var(--space-1) var(--space-2);
-    min-height: 48px;
-    /* menu at least 48px tall */
-    align-items: center;
-}
-
+/* Links + current page (wayfinding) */
 .menu a,
-.menu .current {
-    display: inline-flex;
-    align-items: center;
-    height: 48px;
-    /* 48px target size */
-    padding: 0 .75rem;
-    border-radius: 10px;
-    text-decoration: none;
-    /* remove underline requirement */
-    color: var(--text);
-    font-weight: 700;
+.menu .current{
+  display: inline-flex;
+  align-items: center;
+  height: 48px;                       /* 48px target size */
+  padding: 0 12px;
+  border-radius: 10px;
+  text-decoration: none;              /* remove underline */
+  color: #EAF1FF;
+  font-weight: 700;
 }
 
-.menu a:hover {
-    /* pseudo-class on anchors */
-    background-color: rgba(0, 229, 255, .15);
-    color: var(--accent);
+.menu .current{
+  background-color: rgba(0,229,255,0.22);
+  color: #00E5FF;
+  cursor: default;
 }
 
-.menu .current {
-    background: rgba(0, 229, 255, .22);
-    color: var(--accent);
-    cursor: default;
+/* Pseudo-class hover for anchors (nav + content links) */
+.menu a:hover{
+  background-color: rgba(0,229,255,0.15);
+  color: #00E5FF;
+}
+main a{
+  color: #00E5FF;
+  text-decoration: underline;
+}
+main a:hover{                          /* required hover state */
+  color: #FFD166;
 }
 
-/* ========== Headings & Paragraphs (required) ========== */
-h1 {
-    margin: 1.2rem 0 .6rem;
-    font-size: 2rem;
-    /* different font size */
-    line-height: 1.2;
-    color: var(--accent);
+/* ----- Headings & Paragraphs (required) ----- */
+h1{
+  margin: 1.2rem 0 0.6rem;
+  font-size: 2rem;                    /* different size from body */
+  line-height: 1.2;
+  color: #00E5FF;
 }
 
-h2 {
-    margin: 1.1rem 0 .4rem;
-    font-size: 1.25rem;
-    /* different size from h1/body */
-    color: var(--accent-2);
+h2{
+  margin: 1.1rem 0 0.4rem;
+  font-size: 1.25rem;                 /* different from h1/body */
+  color: #FFD166;
 }
 
-p {
-    margin: .5rem 0;
+p{ margin: 0.5rem 0; }
+
+/* ----- Cards / Sections (borders & radius) ----- */
+.card{
+  background-color: #141A33;
+  border: 1px solid #24325A;          /* border color/type/thickness */
+  border-radius: 12px;                 /* border radius */
+  padding: 1rem;
+  margin: 1rem 0;
 }
 
-/* ========== Cards / Sections (borders & radius) ========== */
-.card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    /* border color/type/thickness */
-    border-radius: var(--radius);
-    /* border radius */
-    padding: var(--space-2);
-    margin: var(--space-2) 0;
+/* ----- Lists (styling & spacing required) ----- */
+/* Content list */
+.feature-list{
+  list-style: square;                  /* changed bullet type */
+  padding-left: 1.25rem;               /* padding requirement */
+  margin: 0.5rem 0 0.25rem;            /* margin requirement */
 }
 
-/* ========== Lists (styling & spacing required) ========== */
-.feature-list {
-    list-style: square;
-    /* change bullet type */
-    padding-left: 1.25rem;
-    /* padding requirement */
-    margin: .5rem 0 .25rem;
-    /* margin requirement */
+/* Ordered list with a different style */
+.steps{
+  list-style: decimal-leading-zero;
+  padding-left: 1.5rem;
+  margin: 0.5rem 0 0.25rem;
 }
 
-.steps {
-    list-style: decimal-leading-zero;
-    padding-left: 1.5rem;
-    margin: .5rem 0 .25rem;
+/* Music track list */
+.tracklist{
+  list-style: disc;                    /* explicit bullet type */
+  padding-left: 1.25rem;
+  margin: 0.5rem 0 0;
 }
-
-.tracklist {
-    list-style: disc;
-    /* explicit bullet type for track list */
-    padding-left: 1.25rem;
-    margin: .5rem 0 0;
-}
-
-.tracklist li {
-    margin: .3rem 0;
-}
-
-.title {
-    font-weight: 700;
-}
-
-.artist {
-    font-style: italic;
-}
+.tracklist li{ margin: 0.3rem 0; }
+.title{ font-weight: 700; }
+.artist{ font-style: italic; }
 
 /* Definition list styling */
-.glossary dt {
-    font-weight: 700;
-    color: var(--accent-2);
+.glossary dt{
+  font-weight: 700;
+  color: #FFD166;
+}
+.glossary dd{
+  margin: 0 0 0.6rem 0;
+  padding-left: 0.75rem;
+  border-left: 3px solid #24325A;
+  color: #EAF1FF;
 }
 
-.glossary dd {
-    margin: 0 0 .6rem 0;
-    padding-left: .75rem;
-    border-left: 3px solid var(--border);
-    color: var(--text);
+/* ----- Footer ----- */
+footer{
+  color: #9FB0D9;
+  border-top: 1px solid #24325A;
+  margin-top: 1.5rem;
 }
-
-/* ========== Footer ========== */
-footer {
-    color: var(--muted);
-    border-top: 1px solid var(--border);
-    margin-top: var(--space-3);
-}
-
-footer a {
-    color: var(--accent);
-}
-
-footer a:hover {
-    color: var(--accent-2);
-}
+footer a{ color: #00E5FF; }
+footer a:hover{ color: #FFD166; }
 
 /* ==============================================
-   Notes:
-   - Meets “Styling Tags” (body, h1, h2, p, nav)
-   - Flexbox horizontal nav, underline removed, 48px tall, wayfinding styled
-   - Pseudo-class :hover on anchors (menu + content)
-   - Borders + radius on brand outline & cards
-   - Lists styled (bullets, padding/margin, dl styles)
-   - Two font weights (400, 700) and multiple sizes
+   Checklist Notes:
+   - No CSS variables used (all hex values inline).
+   - body, h1, h2, p, nav are styled.
+   - Flexbox horizontal nav, no underline, ≥48px height,
+     and visible wayfinding (.current).
+   - Lists: custom bullets, padding/margins, dl styled.
+   - Borders + border-radius used in header badge & cards.
+   - Hover pseudo-class on links included.
+   - Two font weights (400, 700) and multiple sizes.
    ============================================== */

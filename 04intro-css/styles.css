@@ -129,7 +129,7 @@ p{ margin: 0.5rem 0; }
 
 /* Music track list */
 .tracklist{
-  list-style: disc;                    /* explicit bullet type */
+  list-style: square;                    /* explicit bullet type */
   padding-left: 1.25rem;
   margin: 0.5rem 0 0;
 }

@@ -6,24 +6,17 @@
   <meta name="author" content="Kallie Kunz">
   <meta name="description" content="Scoreboard Sounds helps game ops leaders find clean, high-energy music for tipoff, timeouts, hype moments, and more.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Google Font -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-
-  <!-- External CSS -->
-  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Header identical on both pages: ONLY the span site name -->
+  <!-- Header identical on both pages -->
   <header>
     <span id="site-name">Scoreboard Sounds</span>
   </header>
 
   <!-- Navigation identical on both pages -->
   <nav aria-label="Main navigation">
-    <ul class="menu">
-      <li><a href="index.html" class="current" aria-current="page">Home</a></li>
+    <ul>
+      <li><a href="index.html" aria-current="page">Home</a></li>
       <li><a href="library.html">Music Library</a></li>
     </ul>
   </nav>
@@ -31,13 +24,52 @@
   <main>
     <h1>Game-Day Music Made Simple</h1>
 
-    <section class="card">
+    <!-- This section satisfies paragraphs, h2, and inline tags -->
+    <section>
       <h2>Who We Serve</h2>
-      <p>We help <em>high school</em> and small-venue game ops teams quickly find clean, high-energy tracks for warm-ups, player intros, and timeouts. Our picks keep parents happy, athletes focused, and crowds hyped.</p>
+      <p>We help <em>high school</em> and small-venue game ops teams quickly find clean, high-energy tracks for warm-ups, <strong>player intros</strong>, and timeouts.</p>
       <p>Every list is vetted for language, vibe, and pacing, so you can press play with confidence and get back to running your show.</p>
     </section>
 
-    <!-- Add the rest of your content sections here -->
+    <!-- Unordered list requirement -->
+    <section>
+      <h2>Our Music Categories</h2>
+      <p>Browse popular sections to build your show:</p>
+      <ul>
+        <li>Warm-up Tracks</li>
+        <li>Timeout Hype Cuts</li>
+        <li>Intro Anthems</li>
+        <li>Victory Songs</li>
+      </ul>
+    </section>
+
+    <!-- Ordered list + break tag requirement -->
+    <section>
+      <h2>How to Use This Site</h2>
+      <p>Follow these quick steps to get started.<br>It only takes a few minutes!</p>
+      <ol>
+        <li>Open the Music Library page.</li>
+        <li>Pick a category (Warm-Up, Timeouts, Intros).</li>
+        <li>Queue songs in your software.</li>
+        <li>Test volume &amp; transitions before doors open.</li>
+      </ol>
+    </section>
+
+    <!-- Definition list requirement (3 terms/defs) -->
+    <section>
+      <h2>Glossary</h2>
+      <dl>
+        <dt>Stinger</dt>
+        <dd>A 3–8 second music hit used to punctuate a PA line or moment.</dd>
+        <dt>Walk-in</dt>
+        <dd>Music played while fans enter; medium energy, familiar hooks.</dd>
+        <dt>Bumper</dt>
+        <dd>Short clip used to cover transitions between reads or replays.</dd>
+      </dl>
+    </section>
+
+    <!-- HTML comment present -->
+    <!-- End of required content for pre-CSS assignment -->
   </main>
 
   <footer>

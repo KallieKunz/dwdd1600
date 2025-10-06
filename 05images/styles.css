@@ -179,6 +179,20 @@ div.photo-gallery figcaption{
   color: #EAF1FF;
 }
 
+div.photo-gallery{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 10px;
+}
+div.photo-gallery figure {
+    margin: 0;
+}
+div.photo-gallery figcaption{
+    text-align: center;
+    font-size: .8rem;
+    color:#b64e11;
+}
+
 /* ----- Footer ----- */
 footer{
   color: #9FB0D9;

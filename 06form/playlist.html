@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Scoreboard Sounds | Music to Get the Game Bumping</title>
+  <meta name="author" content="Kallie Kunz">
+  <meta name="description" content="Scoreboard Sounds helps game ops leaders find clean, high-energy music for tipoff, timeouts, hype moments, and more.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header identical on both pages and contains ONLY the span site name -->
+  <header>
+    <span id="site-name">Scoreboard Sounds</span>
+  </header>
+
+  <!-- Navigation identical on both pages -->
+  <nav aria-label="Main navigation">
+  <ul class="menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="library.html">Music Library</a></li>
+    <li><a href="photos.html">Photos</a></li>
+    <li class="active"><a href="playlist.html">Request a Playlist</a></li>
+  </ul>
+</nav>
+
+  <main>
+    <h1>Request a Playlist</h1>
+    <form method="get" class="info" action="thanks.html">
+
+      <fieldset>
+        <legend>Customer Information</legend>
+        <label> First Name*<input type="text" name="fname" required></label>
+        <label> Last Name*<input type="text" name="lname" required></label>
+        <label> Cell Number*<input type="tel" name="phone" required placeholder="987-555-1234"></label>
+        <label> Email*<input type="email" name="email" required placeholder="example@example.com"></label>
+        </fieldset>
+
+<fieldset>
+        <legend>Playlist Delivery Method Information</legend>
+            <label><input type="radio" name="method" value="applemusic" checked> Apple Music (2 days)</label>
+            <label><input type="radio" name="method" value="spotify" checked> Spotify (3 days)</label>
+            <label><input type="radio" name="method" value="youtubemusic" checked> YouTube Music (4 days)</label>
+        </fieldset>
+
+        <fieldset>
+        <legend>Delivery Options</legend>
+            <label><input type="checkbox" name="pregame" value="chosen"> Pregame</label>
+            <label><input type="checkbox" name="hype" value="chosen"> Hype</label>
+            <label><input type="checkbox" name="timeouts" value="chosen"> Timeouts</label>
+            <label><input type="checkbox" name="crowdpleasers" value="chosen"> Crowd Pleasers</label>
+            <label><input type="checkbox" name="specifics" value="chosen"> Specific Situations</label>
+
+            <label>
+            <select name="time"> 
+                <option value="none">Please Select</option>
+                <option value="Football">Football</option>
+                <option value="basketball">Basketball</option>
+                <option value="Baseball">Baseball or Softball</option>
+                <option value="Lacrosse">Lacrosse</option>
+            </select>
+            </label>
+        </fieldset>
+
+        <label>Comments
+            <textarea name="comments"></textarea>
+        </label>
+
+
+        <input type="submit" value="Send Playlist Request">
+        </form>
+  </main>
+
+  <footer>
+    <address>
+      Scoreboard Sounds &bull; Provo, UT 84601 &bull; <a href="tel:+18015551234">+1 (801) 555-1234</a>
+    </address>
+    <p>&copy; 2025 Scoreboard Sounds. All rights reserved.</p>
+  </footer>
+</body>
+</html>
